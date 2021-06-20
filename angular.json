@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "app": {
+    "fe-calculator-project": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -90,5 +90,5 @@
       }
     }
   },
-  "defaultProject": "app"
+  "defaultProject": "fe-calculator-project"
 }

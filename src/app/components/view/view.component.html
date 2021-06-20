@@ -1,0 +1,53 @@
+<div class="solo-box">
+  <ng-container *ngIf="pokemon">
+    <h1>{{ pokemon.name | titlecase }}</h1>
+    <h3>
+      Type:
+      <span *ngFor="let type of pokemon.types">
+        {{ type.type.name | titlecase }}
+      </span>
+    </h3>
+    <img
+      src="https://pokeres.bastionbot.org/images/pokemon/{{ pokemon.id }}.png"
+      alt=""
+      style="width: 150px"
+    />
+    <br />
+    <ul>
+      <li>
+        Experience: <b>{{ pokemon.base_experience }}</b>
+      </li>
+      <li>
+        Height: <b>{{ pokemon.height }}</b>
+      </li>
+      <li>
+        Weight: <b>{{ pokemon.weight }}</b>
+      </li>
+    </ul>
+    <br />
+    <h4>Abilities</h4>
+    <ul>
+      <li *ngFor="let ability of pokemon.abilities">
+        {{ ability.ability.name | titlecase }}
+      </li>
+    </ul>
+
+    <div>
+      <a [routerLink]="['/pokemon-directory']">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="26"
+          height="26"
+          fill="currentColor"
+          class="bi bi-arrow-left"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
+          />
+        </svg>
+      </a>
+    </div>
+  </ng-container>
+</div>
