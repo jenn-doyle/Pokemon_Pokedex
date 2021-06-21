@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -15,7 +14,7 @@ export class PokemonService {
   }
 
   getPokemons(): Observable<any> {
-    const url = `${this.url}?limit=300&offset=0`;
+    const url = `${this.url}?page=1&limit=300`;
     return this.http.get<any>(url);
   }
 

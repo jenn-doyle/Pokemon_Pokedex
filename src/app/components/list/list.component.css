@@ -1,6 +1,6 @@
 .pokemon-grid {
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 16px;
   padding: 20px;
   grid-template-columns: repeat(auto-fit, minmax(18%, 1fr));
   width: 95%;
@@ -12,14 +12,12 @@
   height: 200px;
   border: 1px solid;
   padding: 10px;
-  box-shadow: 5px 10px #888888;
+  box-shadow: 5px 10px #b4b4b4;
 }
 
 h1 {
-  font-size: 1.5em;
-  margin-bottom: 20px;
   text-align: center;
-  text-decoration: underline;
+  margin: -10px;
 }
 
 h3 {
@@ -28,5 +26,5 @@ h3 {
 }
 
 .my-pagination /deep/ .ngx-pagination .current {
-  background: red;
+  background: rgb(68, 93, 204);
 }

@@ -1,12 +1,3 @@
-h1 {
-  font-size: 1.5em;
-}
-
-span {
-  font-size: 1em;
-  font-weight: bold;
-}
-
 .solo-box {
   width: 30%;
   height: 95%;
@@ -15,6 +6,15 @@ span {
   box-shadow: 5px 10px #888888;
   margin: auto;
   text-align: center;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+span {
+  font-size: 1em;
+  font-weight: bold;
 }
 
 ul {

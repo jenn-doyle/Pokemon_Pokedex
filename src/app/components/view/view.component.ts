@@ -7,6 +7,7 @@ import { PokemonService } from 'src/app/services/pokemon.service';
   templateUrl: './view.component.html',
   styleUrls: ['./view.component.scss']
 })
+
 export class ViewComponent implements OnInit {
 
   pokemon: any = null;

@@ -13,21 +13,21 @@
       style="width: 150px"
     />
     <br />
-    <ul>
-      <li>
+    <ul class="list-group list-group-flush mt-4">
+      <li class="list-group-item">
         Experience: <b>{{ pokemon.base_experience }}</b>
       </li>
-      <li>
+      <li class="list-group-item">
         Height: <b>{{ pokemon.height }}</b>
       </li>
-      <li>
+      <li class="list-group-item">
         Weight: <b>{{ pokemon.weight }}</b>
       </li>
     </ul>
     <br />
     <h4>Abilities</h4>
-    <ul>
-      <li *ngFor="let ability of pokemon.abilities">
+    <ul class="list-group list-group-flush mt-4">
+      <li class="list-group-item" *ngFor="let ability of pokemon.abilities">
         {{ ability.ability.name | titlecase }}
       </li>
     </ul>

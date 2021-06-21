@@ -1,38 +1,45 @@
-<h1>Pokemon Cards</h1>
-<div class="pokemon-grid">
-  <div
-    class="box"
-    *ngFor="
-      let pokemon of pokemons
-        | paginate
-          : {
-              itemsPerPage: 50,
-              currentPage: page,
-              totalItems: totalPokemons
-            };
-      let i = index
-    "
-  >
-    <p>{{ pokemon.id }}</p>
-    <h3>{{ pokemon.name | titlecase }}</h3>
-    <div style="text-align: center" [routerLink]="['/pokemon', pokemon.name]">
-      <img
-        src="https://pokeres.bastionbot.org/images/pokemon/{{ pokemon.id }}.png"
-        alt="..."
-        height="100px"
-      />
+<div style="margin: -30px">
+  <h1>
+    <img src="assets/img/pokeTitle.svg" alt="" height="100px" />
+  </h1>
+  <div class="pokemon-grid">
+    <div
+      class="box"
+      *ngFor="
+        let pokemon of pokemons
+          | paginate
+            : {
+                itemsPerPage: 50,
+                currentPage: page,
+                totalItems: totalPokemons
+              };
+        let i = index
+      "
+    >
+      <p>{{ pokemon.id }}</p>
+      <h3>{{ pokemon.name | titlecase }}</h3>
+      <div
+        style="text-align: center; cursor: pointer"
+        [routerLink]="['/pokemon', pokemon.name]"
+      >
+        <img
+          src="https://pokeres.bastionbot.org/images/pokemon/{{
+            pokemon.id
+          }}.png"
+          alt="..."
+          height="100px"
+        />
+      </div>
     </div>
   </div>
+  <div style="text-align: center">
+    <pagination-controls
+      class="my-pagination"
+      (pageChange)="page = $event; scrollToTop()"
+      maxSize="6"
+      previousLabel="Prev"
+      nextLabel="Next"
+      [responsive]="true"
+    ></pagination-controls>
+  </div>
 </div>
-<div style="text-align: center">
-  <pagination-controls
-    class="my-pagination"
-    (pageChange)="page = $event; scrollToTop()"
-    maxSize="6"
-    previousLabel="Prev"
-    nextLabel="Next"
-    [responsive]="true"
-  ></pagination-controls>
-</div>
-
-<!-- pokemons = []; getPokemonCards(); -->

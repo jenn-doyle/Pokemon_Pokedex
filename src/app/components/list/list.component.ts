@@ -27,7 +27,6 @@ export class ListComponent implements OnInit {
     this.getPokemonCards();
   }
 
-
   getPokemonCards(): void {
     this.pokemonService.getPokemons()
     .subscribe(response => {
@@ -39,6 +38,4 @@ export class ListComponent implements OnInit {
         })
       });
   }
-
 }
-
